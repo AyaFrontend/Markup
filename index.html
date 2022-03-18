@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="container-fluid bg-white position-relative zindex-0 ">
+    <div class="row ">
+      <div class="col-12">
+        <div class="w-50 position-absolute zindex-2  start-50 translate-middle-x mt-5 shadow-lg  ">
+          <div class="w-100 p-4 bg-green ">
+            <input class="form-control w-75 p-2 m-auto rounded-0 text-yellow" placeholder="Search by name..." id="search" onkeyup="search()">
+          </div>
+          <div class="w-100 bg-white p-4">
+            <button class="btn bg-green text-yellow mb-5" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addBtn()">New
+              Product</button>
+            <div class="table-responsive">
+              <table class="table text-center table-hover">
+                <thead class="text-green ">
+                  <tr>
+                    <th>Index</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Desc</th>
+                  </tr>
+
+                </thead>
+                <tbody id="table-body" class="text-yellow">
+                 
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class=" position-fixed top-0 start-0 w-50 h-100 zindex-1 bg-green "></div>
+      <div class=" position-fixed top-0 start-25 w-50 h-100 zindex-1 bg-white bg-triangle"></div>
+    </div>
+
+
+
+  </div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade p-4" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-yellow" id="exampleModalLabel">CRUD SYSTEM</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" placeholder="Product Name" id="pname"
+            class="form-control py-3  rounded-0 border-green text-yellow my-2">
+
+            <div class="alert alert-warning alert-dismissible fade show " id="alert-id" role="alert">
+              <strong id="alert-content"></strong> 
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+          <input type="text" placeholder="Product Category" id="pcategory"
+            class="form-control py-3  rounded-0 border-green text-yellow my-2">
+          <input type="text" placeholder="Product Price" id="price"
+            class="form-control py-3 rounded-0 border-green text-yellow my-2">
+          <textarea placeholder="Description.." id="pdesc"
+            class="form-control py-4 rounded-0 border-green text-yellow my-2 "></textarea>
+        </div>
+        <div class="modal-footer  d-flex justify-content-start" >
+          <div id="modal-foo"></div>
+          <button type="button" class="btn bg-green text-yellow" onclick="Clear()">Clear</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+:root{
+    --green-color:#004746;
+    --yellow-color:#7a5706;
+
+}
+.bg-green
+{
+    background-color: var(--green-color) ;
+}
+.bg-yellow
+{
+    background-color: var(--yellow-color) 
+}
+
+.text-yellow
+{
+    color: var(--yellow-color) !important;
+}
+.text-green
+{
+    color: var(--green-color);
+}
+.border-green
+{
+    border: var(--green-color) 2px solid;
+}
+.zindex-0
+{
+    z-index: 0;
+}
+.zindex-1
+{
+    z-index: 1;
+}
+.zindex-2
+{
+    z-index: 2;
+}
+.bg-triangle
+{
+    
+transform: rotate(60deg);
+
+    
+}
+.start-25
+{
+    left: 25%;
+}
+
+#alert-id
+{
+    display: none;
+}
